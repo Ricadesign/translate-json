@@ -2,10 +2,6 @@
 
 namespace Ricadesign\TranslateJson\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Ricadesign\TranslateJson\Tests\TestCase;
-use Ricadesign\TranslateJson\TranslateJsonServiceProvider;
-
 class TranslationTest extends TestCase
 {
     /**

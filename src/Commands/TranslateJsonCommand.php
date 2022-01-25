@@ -6,11 +6,11 @@ use Illuminate\Console\Command;
 
 class TranslateJsonCommand extends Command
 {
-/**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
+    /**
+         * The name and signature of the console command.
+         *
+         * @var string
+         */
     protected $signature = 'trans:build {file} {locale=es}';
 
     /**
@@ -43,7 +43,7 @@ class TranslateJsonCommand extends Command
         //Array
         $output = [];
         foreach ($array as $value) {
-            $output[] =  $value[0] . '":"' . $value[1];
+            $output[] = $value[0] . '":"' . $value[1];
         }
 
         $json_output = json_encode($this->flatten($output));
@@ -56,9 +56,13 @@ class TranslateJsonCommand extends Command
         return self::SUCCESS;
     }
 
-    function flatten(array $array) {
-        $return = array();
-        array_walk_recursive($array, function($a) use (&$return) { $return[] = $a; });
+    public function flatten(array $array)
+    {
+        $return = [];
+        array_walk_recursive($array, function ($a) use (&$return) {
+            $return[] = $a;
+        });
+
         return $return;
     }
 }

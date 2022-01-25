@@ -2,9 +2,9 @@
 
 namespace Ricadesign\TranslateJson;
 
+use Ricadesign\TranslateJson\Commands\TranslateJsonCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ricadesign\TranslateJson\Commands\TranslateJsonCommand;
 
 class TranslateJsonServiceProvider extends PackageServiceProvider
 {
