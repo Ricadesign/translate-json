@@ -23,38 +23,9 @@ You can install the package via composer:
 composer require ricadesign/translate-json
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="translate-json-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="translate-json-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="translate-json-views"
-```
-
 ## Usage
 
-```php
-$translateJson = new Ricadesign\TranslateJson();
-echo $translateJson->echoPhrase('Hello, Ricadesign!');
-```
+php artisan trans:build {file} {locale=es}
 
 ## Testing
 
