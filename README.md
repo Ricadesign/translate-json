@@ -25,7 +25,9 @@ composer require ricadesign/translate-json
 
 ## Usage
 
+```bash
 php artisan trans:build {file} {locale=es}
+```
 
 ## Testing
 
